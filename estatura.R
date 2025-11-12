@@ -7,3 +7,9 @@ boxplot_estatura = base |>
   geom_boxplot(fill = "lightgreen") +
   labs( y = "Estatura (metros) ")+
   theme_classic()
+
+library(usethis)
+use_git_config(user.name = "anna02vieira",
+               user.email ="annav@id.uff.br")
+usethis::create_github_token()
+gitcreds::gitcreds_set()
