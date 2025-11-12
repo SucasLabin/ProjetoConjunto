@@ -1,3 +1,5 @@
+# inserção de boxplot de estatura
+
 library(readxl)
 library(ggplot2)
 base = read_xlsx("Base Casos.xlsx")
@@ -13,3 +15,11 @@ use_git_config(user.name = "anna02vieira",
                user.email ="annav@id.uff.br")
 usethis::create_github_token()
 gitcreds::gitcreds_set()
+
+#segundo grafico 
+
+boxplot_peso = base |>
+  ggplot(mapping = aes(y  = Peso)) +
+  geom_boxplot(fill = "lightgreen") +
+  theme_classic() 
+  labs( y = "Peso em Kgs")+
